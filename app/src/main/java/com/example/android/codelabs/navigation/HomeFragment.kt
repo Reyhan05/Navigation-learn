@@ -74,4 +74,12 @@ class HomeFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.shopping_cart -> findNavController().navigate(R.id.chart, null)
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
